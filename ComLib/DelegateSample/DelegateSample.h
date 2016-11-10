@@ -9,5 +9,6 @@
 #define DELEGATESAMPLE_H_
 
 void DelegateSample(void (*)(int, int), int);
+int DelegateSample2(int (*)(int), int);
 
 #endif /* DELEGATESAMPLE_H_ */

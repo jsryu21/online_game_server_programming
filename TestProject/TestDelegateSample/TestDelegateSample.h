@@ -9,5 +9,6 @@
 #define TEST_H_
 
 void Callback(int, int);
+int Callback2(int);
 
 #endif /* TEST_H_ */
