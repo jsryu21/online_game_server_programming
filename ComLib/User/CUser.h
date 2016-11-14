@@ -15,9 +15,11 @@ class CUser
 {
 public:
 	CUser(VOID);
-	~CUser(VOID);
+	virtual ~CUser(VOID);
 	VOID SetUserID(LPCTSTR szUserID, LPCTSTR szPasswd);
 	VOID SetUserInformation(LPCTSTR szName, LPCTSTR szAddress, USHORT usAge);
+protected:
+	virtual VOID OnUpdatedUserID(VOID) = 0;
 private:
 	TCHAR m_szUserID[64];
 	TCHAR m_szPassword[64];

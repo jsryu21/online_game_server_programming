@@ -6,6 +6,12 @@
  */
 
 #include "CWebUser.h"
+#include <cstdio>
+
+CWebUser::~CWebUser()
+{
+	_tprintf(_T("~CWebUser\n"));
+}
 
 VOID CWebUser::SetWebInformation(LPCTSTR szBoardName)
 {
@@ -15,4 +21,9 @@ VOID CWebUser::SetWebInformation(LPCTSTR szBoardName)
 	}
 
 	_tcsncpy(m_szBoardName, szBoardName, 64);
+}
+
+VOID CWebUser::OnUpdatedUserID(VOID)
+{
+	_tprintf(_T("CWebUser OnUpdatedUserID\n"));
 }

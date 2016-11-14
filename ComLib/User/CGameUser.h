@@ -13,7 +13,9 @@
 class CGameUser : public CUser
 {
 public:
+	~CGameUser();
 	VOID SetGameInformation(LPCTSTR szCharacterName, USHORT usLevel);
+	VOID OnUpdatedUserID(VOID);
 private:
 	TCHAR m_szCharacterName[64];
 	USHORT m_usLevel;

@@ -6,6 +6,12 @@
  */
 
 #include "CGameUser.h"
+#include <cstdio>
+
+CGameUser::~CGameUser()
+{
+	_tprintf(_T("~CGameUser\n"));
+}
 
 VOID CGameUser::SetGameInformation(LPCTSTR szCharacterName, USHORT usLevel)
 {
@@ -17,4 +23,9 @@ VOID CGameUser::SetGameInformation(LPCTSTR szCharacterName, USHORT usLevel)
 	_tcsncpy(m_szCharacterName, szCharacterName, 64);
 
 	m_usLevel = usLevel;
+}
+
+VOID CGameUser::OnUpdatedUserID(VOID)
+{
+	_tprintf(_T("CGameUser OnUpdatedUserID\n"));
 }

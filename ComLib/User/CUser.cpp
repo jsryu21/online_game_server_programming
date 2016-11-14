@@ -6,6 +6,7 @@
  */
 
 #include "CUser.h"
+#include <cstdio>
 
 CUser::CUser(VOID)
 {
@@ -19,6 +20,7 @@ CUser::CUser(VOID)
 
 CUser::~CUser(VOID)
 {
+	_tprintf(_T("~CUser\n"));
 }
 
 VOID CUser::SetUserID(LPCTSTR szUserID, LPCTSTR szPassword)
@@ -29,6 +31,9 @@ VOID CUser::SetUserID(LPCTSTR szUserID, LPCTSTR szPassword)
 	}
 
 	_tcsncpy(m_szUserID, szUserID, 64);
+
+	OnUpdatedUserID();
+
 	_tcsncpy(m_szPassword, szPassword, 64);
 }
 
